@@ -82,6 +82,7 @@ displayBlogPost = (posts) => {
   
     return (
       <div className="App">
+        <h2>Healer's Intent</h2>
       <form onSubmit={this.submit}>
         <div className="form-input">
           <input
