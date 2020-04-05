@@ -59,6 +59,7 @@ axios({
   })
 
 };
+
 resetUserInputs = () => {
   this.setState({
     title: '',
