@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './components/NavBar';
+import { BrowserRouter, Route } from 'react-router-dom'; 
 
-class App extends React.Component{
+class App extends Component{
   
 state = {
   title: '',
   body: '',
+  last: '',
+  gender: '',
+  age: '',
+  city: '',
+  region: '',
+  country: '',
+  name: '',
+  email: '',
+  condition: '',
+  yourname: '',
   posts: []
 }
+
 componentDidMount = () => {
   this.getBlogPost();
 };
@@ -41,7 +54,16 @@ submit = (event) => {
   //current state
   const payload = {
     title: this.state.title,
-    body: this.state.body
+    body: this.state.body,
+    last: this.state.last,
+    gender: this.state.gender,
+    age: this.state.age,
+    city: this.state.city,
+    region: this.state.region,
+    country: this.state.country,
+    name: this.state.name,
+    email: this.state.email,
+    yourname: this.state.yourname
 };
 
 axios({
@@ -63,7 +85,16 @@ axios({
 resetUserInputs = () => {
   this.setState({
     title: '',
-    body: ''
+    body: '',
+    last: '',
+    gender: '',
+    age: '',
+    city: '',
+    region: '',
+    country: '',
+    name: '',
+    email: '',
+    yourname: ''
   });
 };
 
@@ -74,6 +105,16 @@ displayBlogPost = (posts) => {
     <div key={index}>
       <h3>{post.title}</h3>
       <p>{post.body}</p>
+      <p>{post.last}</p>
+      <p>{post.gender}</p>
+      <p>{post.age}</p>
+      <p>{post.city}</p>
+      <p>{post.region}</p>
+      <p>{post.country}</p>
+      <p>{post.name}</p>
+      <p>{post.email}</p>
+      <p>{post.yourname}</p>
+
     </div>
   ));
 }
@@ -81,8 +122,14 @@ displayBlogPost = (posts) => {
    console.log('State: ', this.state);
   
     return (
+       <BrowserRouter>
       <div className="App">
         <h2>Healer's Intent</h2>
+        <header className="App-header">
+      <NavBar />
+      </header>
+      
+      
       <form onSubmit={this.submit}>
         <div className="form-input">
           <input
@@ -104,12 +151,87 @@ displayBlogPost = (posts) => {
             >
             </textarea>
         </div>
+        <div className="form-input">
+          <input
+            placeholder="Last Name"
+            type="text"
+            name="last"
+            value={this.state.last}
+            onChange={this.handleChange}
+            />
+        </div>
+        <div className="form-input">
+          <input
+            placeholder="Gender"
+            type="text"
+            name="gender"
+            value={this.state.gender}
+            onChange={this.handleChange}
+            />
+        </div> <div className="form-input">
+          <input
+            placeholder="age"
+            type="text"
+            name="age"
+            value={this.state.age}
+            onChange={this.handleChange}
+            />
+        </div> <div className="form-input">
+          <input
+            placeholder="City"
+            type="text"
+            name="city"
+            value={this.state.city}
+            onChange={this.handleChange}
+            />
+        </div> <div className="form-input">
+          <input
+            placeholder="State or Region"
+            type="text"
+            name="region"
+            value={this.state.region}
+            onChange={this.handleChange}
+            />
+        </div> <div className="form-input">
+          <input
+            placeholder="Country"
+            type="text"
+            name="country"
+            value={this.state.country}
+            onChange={this.handleChange}
+            />
+        </div> <div className="form-input">
+          <input
+            placeholder="Name"
+            type="text"
+            name="name"
+            value={this.state.name}
+            onChange={this.handleChange}
+            />
+        </div> <div className="form-input">
+          <input
+            placeholder="Email"
+            type="text"
+            name="email"
+            value={this.state.email}
+            onChange={this.handleChange}
+            />
+        </div> <div className="form-input">
+          <input
+            placeholder="Your Name"
+            type="text"
+            name="yourname"
+            value={this.state.yourname}
+            onChange={this.handleChange}
+            />
+        </div>
         <button>Submit</button>
       </form>
       <div className="blog-">
         {this.displayBlogPost(this.state.posts)}
       </div>
       </div>
+      </BrowserRouter>
     );
   }
 }

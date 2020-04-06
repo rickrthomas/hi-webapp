@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 
 const routes = require('./routes/api');
 
-// const MONGODB_URI = 'mongodb+srv://tru:truluv143@cluster0-e970x.mongodb.net/test?retryWrites=true&w=majority'
+
 // MONGODB_URI ||
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/hi', {
     useNewUrlParser: true,
