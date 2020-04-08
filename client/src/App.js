@@ -4,11 +4,13 @@ import NavBar from './components/NavBar';
 import { BrowserRouter, Route } from 'react-router-dom'; 
 import Footer from './components/Footer.js';
 import './App.css';
+import TextareaAutosize from 'react-autosize-textarea';
 
 import Contact from './components/Contact.js'
 import About from './components/About.js';
 import Resources from './components/Resources.js';
-import Instructions from './components/Instructions.js'
+import Instructions from './components/Instructions.js';
+import Disclaimer from './components/Disclaimer.js';
 
 class App extends Component{
   
@@ -21,9 +23,9 @@ state = {
   city: '',
   region: '',
   country: '',
-  name: '',
+  description: '',
   email: '',
-  
+
   yourname: '',
   posts: []
 }
@@ -68,7 +70,7 @@ submit = (event) => {
     city: this.state.city,
     region: this.state.region,
     country: this.state.country,
-    name: this.state.name,
+    description: this.state.name,
     email: this.state.email,
     yourname: this.state.yourname
 };
@@ -99,7 +101,7 @@ resetUserInputs = () => {
     city: '',
     region: '',
     country: '',
-    name: '',
+    description: '',
     email: '',
     yourname: ''
   });
@@ -109,20 +111,66 @@ displayBlogPost = (posts) => {
   if (!posts.length) return null;
 
   return posts.map((post, index) => (
-    <div key={index}>
-      <h3>{post.first}</h3>
-      <p>{post.last}</p>
-      <p>{post.condition}</p>
-      <p>{post.gender}</p>
-      <p>{post.age}</p>
-      <p>{post.city}</p>
-      <p>{post.region}</p>
-      <p>{post.country}</p>
-      <p>{post.name}</p>
-      <p>{post.email}</p>
-      <p>{post.yourname}</p>
-
-    </div>
+    
+      <div key={index} className="col s12 m6 container z-depth-2">
+        
+                    <div className="card">
+                        <div className="card-image">
+                        <p></p>
+                        </div>    
+                        <h4 className="col s12 m12">{post.first} {post.last}</h4>
+                        <hr></hr>
+                        <div className="card-content">
+                            <div className="row">
+                            <div className="col s12 m6">    
+                            <p>ADDED BY</p>
+                            <hr></hr>
+                            <p>{post.yourname}</p>
+                            </div>
+                                </div>
+                                <h4 className="col s12 m12">ABOUT THE PERSON TO BE HEALED</h4>
+                                <div className="row">
+                                <div className="col s12 m6">
+                                    <p>GENDER</p>
+                                    <hr></hr>
+                                <p>{post.gender}</p>
+                                </div>
+                                <div className="col s12 m6">
+                                <p>AGE</p>
+                                <hr></hr>
+                                <p>{post.age}</p>
+                                </div>
+                                </div>
+                                <div className="row">
+                                <div className="col s12 m6">
+                                <p>CITY</p>
+                                <hr></hr>
+                                <p>{post.city}</p>
+                                </div>
+                                <div className="col s12 m6">
+                                <p>REGION</p>
+                                <hr></hr>
+                                <p>{post.region}</p>
+                                </div>
+                                <div className="col s12 m6">
+                                <p>COUNTRY</p>
+                                <hr></hr>
+                                <p>{post.country}</p>
+                                </div>
+                                </div>
+                                <h5 className="col s12 m12">CONDITIONS</h5>
+                                <hr></hr>
+                                <div className="col s12 m12">
+                                <p>{post.condition}</p>
+                                </div>
+                              
+                                
+                        
+                        </div>
+                     
+                    </div>
+                </div>
+  
   ));
 }
   render(){
@@ -136,111 +184,203 @@ displayBlogPost = (posts) => {
         <header className="App-header">
       <NavBar />
       </header>
-      <h2 className=" container">HEALER'S INTENT</h2>
+      
       <Route path="/about" component={About} />
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
         <Route path="/instructions" component={Instructions} />
-  
-      <div className="container">
-      <form onSubmit={this.submit}>
-        <div className="form-input">
-          <input
-            placeholder="First Name"
-            type="text"
-            name="First"
-            value={this.state.first}
-            onChange={this.handleChange}
-            />
+        <Route path="/disclaimer" component={Disclaimer} /> 
+
+
+        <div className="container">
+                <h3>HEALING REQUEST</h3>
+                <h4>About the Person in Need of Healing</h4>
+                    <form onSubmit={this.submit}>
+                        <div className="row">          
+                            </div>
+                            <div className="row">
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                First Name
+                                    <input
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.first} 
+                                        onChange={this.handleChange}
+                                        name="first"
+                                        placeholder="First Name"
+                                    />
+                                </label>
+                                
+                            </div>
+                            </div>
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                Last Name
+                                    <input 
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.last} 
+                                        onChange={this.handleChange} 
+                                        name="last" 
+                                        placeholder="Last Name"
+                                    />
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                Age
+                                    <input 
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.age} 
+                                        onChange={this.handleChange} 
+                                        name="age" 
+                                        placeholder="Age"
+                                    />
+                                </label>
+                            </div>  
+                            </div>
+                            <div className="col s12 m6">
+                            <div className="form-group">  
+                                <label>
+                                Gender
+                                    <input 
+                                        type="text" 
+                                        className="validate" 
+                                        value={this.state.gender} 
+                                        onChange={this.handleChange}
+                                        name="gender"
+                                        placeholder="Gender"
+                                    />
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                        <h4>Where They Live</h4>
+                        <div className="row">
+                            <div className="col s12 m6">
+                            <div className="form-group">
+                                <label>
+                                City
+                                <input 
+                                    type="text" 
+                                    value={this.state.city} 
+                                    onChange={this.handleChange} 
+                                    name="city" 
+                                    placeholder="City"
+                                />
+                                </label>
+                            </div>
+                            </div>
+        <div className="col s12 m6">
+        <div className="form-group">
+            <label>
+              State or Region
+              <input 
+              type="text" 
+              value={this.state.region}
+              onChange={this.handleChange} 
+              name="stateregion" 
+              placeholder="State or Region"
+              />
+            </label>
         </div>
-        <div className="form-input">
-          <input
-            placeholder="Last Name"
-            type="text"
-            name="last"
-            value={this.state.last}
-            onChange={this.handleChange}
-            />
         </div>
-        <div className="form-input">
-          <textarea
-            placeholder="Conditions to Heal"
-            name="body"
-            cols="30"
-            rows="10"
-            value={this.state.condition}
-            onChange={this.handleChange}
-            >
-            </textarea>
+        <div className="col s12 m6">
+        <div className="form-group">
+            <label>
+              Country
+              <input 
+              type="text" 
+              value={this.state.country} 
+              onChange={this.handleChange} 
+              name="country" 
+              placeholder="Country"
+              />
+            </label>
         </div>
-        <div className="form-input">
-          <input
-            placeholder="Gender"
-            type="text"
-            name="gender"
-            value={this.state.gender}
-            onChange={this.handleChange}
-            />
-        </div> <div className="form-input">
-          <input
-            placeholder="age"
-            type="text"
-            name="age"
-            value={this.state.age}
-            onChange={this.handleChange}
-            />
-        </div> <div className="form-input">
-          <input
-            placeholder="City"
-            type="text"
-            name="city"
-            value={this.state.city}
-            onChange={this.handleChange}
-            />
-        </div> <div className="form-input">
-          <input
-            placeholder="State or Region"
-            type="text"
-            name="region"
-            value={this.state.region}
-            onChange={this.handleChange}
-            />
-        </div> <div className="form-input">
-          <input
-            placeholder="Country"
-            type="text"
-            name="country"
-            value={this.state.country}
-            onChange={this.handleChange}
-            />
-        </div> <div className="form-input">
-          <input
-            placeholder="Name"
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-            />
-        </div> <div className="form-input">
-          <input
-            placeholder="Email"
-            type="text"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            />
-        </div> <div className="form-input">
-          <input
-            placeholder="Your Name"
-            type="text"
-            name="yourname"
-            value={this.state.yourname}
-            onChange={this.handleChange}
-            />
         </div>
-        <button>Submit</button>
-      </form>
-      </div>
+        </div>
+    <h4>Conditions Requested To Heal</h4>
+    <div className="col s12 m12">
+        <div className="form-group">
+            <label>
+              Conditions
+            </label>
+    
+            <TextareaAutosize 
+            type="text" 
+            value={this.state.condition} 
+            onChange={this.handleChange} 
+            name="condition"
+            placeholder="Conditions to Heal" >
+            </TextareaAutosize>
+        </div>
+        </div>
+    <h4>Healing Requester Contact</h4>
+    <div className="row">
+    <div className="col s12 m6">
+        <div className="form-group">
+            <label>
+              Your Name
+              <input 
+              type="text" 
+              value={this.state.yourname} 
+              onChange={this.handleChange} 
+              name="yourname" 
+              placeholder="Your Name"
+              />
+            </label>
+        </div>
+        </div>
+        <div className="col s12 m6">
+        <div className="form-group">
+            <label>
+              Your Email
+              <input 
+              type="email" 
+              value={this.state.email} 
+              onChange={this.handleChange} 
+              name="email" 
+              placeholder="Your Email"
+              />
+            </label>
+        </div>          
+        </div>
+        
+        </div>
+        <div className="form-group col s12 m12">
+                            <label>Description Of How You Know This Person: </label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    value={this.state.description}
+                                    onChange={this.handleChange}
+                                    placeholder="Please give us a description of how you know this person."
+                                    />
+                        </div>
+                        <div>
+                            <input 
+                                type="submit" 
+                                value="Submit" 
+                                className="btn btn-primary"
+                                />
+                        </div>
+                    </form>
+                    <div>
+                        <p></p>
+                    </div>
+            </div>
+
+        
+      
       <div className="blog-">
         {this.displayBlogPost(this.state.posts)}
       </div>

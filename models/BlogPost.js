@@ -18,7 +18,7 @@ const BlogPostSchema = new Schema ({
     city: String,
     region: String,
     country: String,
-    name: String,
+    description: String,
     email: String,
     yourname: String,
     date: {

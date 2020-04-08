@@ -11,10 +11,10 @@
     "client": "cd client && npm start",
     "dev": "concurrently -n 'server,client' 'blue, green' \"nodemon server.js\" \"npm run client\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["healer", "intent", "distance healing", "prayer healing", "intention", "healing", "trublu art and design"],
+  "author": "Rick Thomas : TruBlu Art & Design : trubluarts@gmail.com",
+  "description": "Healer's Intent is a community of healers. We strive to join people together for the purpose of healing each other.",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "axios": "^0.19.2",
     "concurrently": "^5.1.0",
@@ -22,6 +22,8 @@
     "mongoose": "^5.9.7",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.2",
+    "react-autosize-textarea": "^7.0.0",
     "react-router-dom": "^5.1.2"
   }
+  
 }
