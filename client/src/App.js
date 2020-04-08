@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import NavBar from './components/NavBar';
 import { BrowserRouter, Route } from 'react-router-dom'; 
+import Footer from './components/Footer.js';
+import './App.css';
+
+import Contact from './components/Contact.js'
+import About from './components/About.js';
+import Resources from './components/Resources.js';
 
 class App extends Component{
   
@@ -124,11 +130,17 @@ displayBlogPost = (posts) => {
     return (
        <BrowserRouter>
       <div className="App">
-        <h2>Healer's Intent</h2>
+      
+       
         <header className="App-header">
       <NavBar />
       </header>
-      
+      <h2 className=" container">HEALER'S INTENT</h2>
+      <Route path="/about" component={About} />
+        <Route path="/resources" component={Resources} />
+        <Route path="/contact" component={Contact} />
+
+  
       
       <form onSubmit={this.submit}>
         <div className="form-input">
@@ -230,7 +242,11 @@ displayBlogPost = (posts) => {
       <div className="blog-">
         {this.displayBlogPost(this.state.posts)}
       </div>
+      <div className="footer">
+          <Footer />
+        </div>
       </div>
+    
       </BrowserRouter>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Intention_Logo from '../img/Intention_Logo.png';
 
 import { Link } from 'react-router-dom';
 
@@ -9,10 +10,10 @@ const NavBar = () => {
 
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab"><Link to="/" className="item">Projects</Link></li>
-        <li class="tab"><Link to="/about" className="item">About</Link></li>
-        <li class="tab"><Link to="/services" className="item">Services</Link></li>
-        <li class="tab"><Link to="/store" className="item">Store</Link></li>
+      <Link to="/home" className="brand-logo center" ><img src={Intention_Logo} alt="Intention Logo" className="nav-logo"></img></Link>
+        <li class="tab"><Link to="/instructions" className="item">HEALING CIRCLE</Link></li>
+        <li class="tab"><Link to="/ask" className="item">HEALING REQUEST</Link></li>
+        
       </ul>
     </div>
   </nav>
