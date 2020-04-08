@@ -4,9 +4,15 @@ const mongoose = require ('mongoose');
 // Schema
 const Schema = mongoose.Schema;
 const BlogPostSchema = new Schema ({
-    title: String,
-    body: String,
+    expireAt: {
+        type: Date,
+        default: Date.now,
+        index: { expires: '5m' },
+      },
+      
+    first: String,
     last: String,
+    condition: String,
     gender: String,
     age: String,
     city: String,

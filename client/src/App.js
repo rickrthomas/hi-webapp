@@ -8,13 +8,14 @@ import './App.css';
 import Contact from './components/Contact.js'
 import About from './components/About.js';
 import Resources from './components/Resources.js';
+import Instructions from './components/Instructions.js'
 
 class App extends Component{
   
 state = {
-  title: '',
-  body: '',
+  first: '',
   last: '',
+  condition: '',
   gender: '',
   age: '',
   city: '',
@@ -22,7 +23,7 @@ state = {
   country: '',
   name: '',
   email: '',
-  condition: '',
+  
   yourname: '',
   posts: []
 }
@@ -59,9 +60,9 @@ submit = (event) => {
   event.preventDefault();
   //current state
   const payload = {
-    title: this.state.title,
-    body: this.state.body,
+    first: this.state.first,
     last: this.state.last,
+    condition: this.state.condition,
     gender: this.state.gender,
     age: this.state.age,
     city: this.state.city,
@@ -90,9 +91,9 @@ axios({
 
 resetUserInputs = () => {
   this.setState({
-    title: '',
-    body: '',
+    first: '',
     last: '',
+    condition: '',
     gender: '',
     age: '',
     city: '',
@@ -109,9 +110,9 @@ displayBlogPost = (posts) => {
 
   return posts.map((post, index) => (
     <div key={index}>
-      <h3>{post.title}</h3>
-      <p>{post.body}</p>
+      <h3>{post.first}</h3>
       <p>{post.last}</p>
+      <p>{post.condition}</p>
       <p>{post.gender}</p>
       <p>{post.age}</p>
       <p>{post.city}</p>
@@ -139,29 +140,18 @@ displayBlogPost = (posts) => {
       <Route path="/about" component={About} />
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
-
+        <Route path="/instructions" component={Instructions} />
   
-      
+      <div className="container">
       <form onSubmit={this.submit}>
         <div className="form-input">
           <input
-            placeholder="Title"
+            placeholder="First Name"
             type="text"
-            name="title"
-            value={this.state.title}
+            name="First"
+            value={this.state.first}
             onChange={this.handleChange}
             />
-        </div>
-        <div className="form-input">
-          <textarea
-            placeholder="body"
-            name="body"
-            cols="30"
-            rows="10"
-            value={this.state.body}
-            onChange={this.handleChange}
-            >
-            </textarea>
         </div>
         <div className="form-input">
           <input
@@ -171,6 +161,17 @@ displayBlogPost = (posts) => {
             value={this.state.last}
             onChange={this.handleChange}
             />
+        </div>
+        <div className="form-input">
+          <textarea
+            placeholder="Conditions to Heal"
+            name="body"
+            cols="30"
+            rows="10"
+            value={this.state.condition}
+            onChange={this.handleChange}
+            >
+            </textarea>
         </div>
         <div className="form-input">
           <input
@@ -239,6 +240,7 @@ displayBlogPost = (posts) => {
         </div>
         <button>Submit</button>
       </form>
+      </div>
       <div className="blog-">
         {this.displayBlogPost(this.state.posts)}
       </div>
