@@ -6,13 +6,15 @@ return (
 <div className="Instructions container">
     <div className="flow-text">
     <br />
-        <h1>RESOURCES</h1>
+        <h4>RESOURCES</h4>
         <ul>
         <br />
             <h4>DISTANCE HEALING</h4>
             <li><a className="siteLink" href="https://en.wikipedia.org/wiki/Faith_healing" >Wikipedia on Faith Healing</a>
             </li>
             <li><a className="siteLink" href="http://www.worldhealingprayers.com/" >World Healing Prayers</a>
+            </li>
+            <li><a className="siteLink" href="https://www.churchofjesuschrist.org/?lang=eng" >Church of Jesus Christ of Latter Day Saints</a>
             </li>
             <li><a className="siteLink" href="https://www.huffpost.com/entry/the-science-of-distant-he_b_177986" >Huffington Post "The Science of Distant Healing"</a>
             </li>
@@ -33,8 +35,10 @@ return (
             </li>
             <br />
             
-            
+            <p>Email us to request your site be included in the distant healing resources.</p>
+    <a href="mailto:trubluarts@gmail.com">Email Us</a>
         </ul>
+
     </div>
 </div>
 );

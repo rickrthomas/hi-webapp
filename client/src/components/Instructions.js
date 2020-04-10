@@ -10,7 +10,7 @@ const Instructions = () => {
 return (
 <div className="Instructions container">
     <div className="flow-text">
-        <h1>DISTANT HEALING INSTRUCTIONS</h1>
+        <h4>DISTANT HEALING INSTRUCTIONS</h4>
         <ul>
            
             <img src ={Distant_Healing_1} className="instructionsIcon" alt="Distant Healing Instructions"></img>
@@ -35,7 +35,7 @@ return (
             <img src ={Distant_Healing_5} className="instructionsIcon" alt="Distant Healing Instructions"></img>
             <li>Now that you've practiced and are familiar with how to heal from a distance. Choose a person from the Healing Circle to heal!</li>
             <p></p>
-    <Link className="btn waves-effect waves-light" to="/" >Healing Circle</Link>
+    <Link className="btn waves-effect waves-light" to="/" >Start Healing</Link>
         </ul>
     </div>
     

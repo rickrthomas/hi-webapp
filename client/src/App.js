@@ -11,6 +11,7 @@ import About from './components/About.js';
 import Resources from './components/Resources.js';
 import Instructions from './components/Instructions.js';
 import Disclaimer from './components/Disclaimer.js';
+// import AskSend from './components/AskSend.js';
 
 class App extends Component{
   
@@ -128,7 +129,7 @@ displayBlogPost = (posts) => {
                             <p>{post.yourname}</p>
                             </div>
                                 </div>
-                                <h4 className="col s12 m12">ABOUT THE PERSON TO BE HEALED</h4>
+                                <h5 className="col s12 m12">ABOUT THE PERSON TO BE HEALED</h5>
                                 <div className="row">
                                 <div className="col s12 m6">
                                     <p>GENDER</p>
@@ -191,7 +192,7 @@ displayBlogPost = (posts) => {
         <Route path="/instructions" component={Instructions} />
         <Route path="/disclaimer" component={Disclaimer} /> 
 
-
+  {/* <AskSend />  */}
         <div className="container">
                 <h3>HEALING REQUEST</h3>
                 <h4>About the Person in Need of Healing</h4>
@@ -287,7 +288,7 @@ displayBlogPost = (posts) => {
               type="text" 
               value={this.state.region}
               onChange={this.handleChange} 
-              name="stateregion" 
+              name="region" 
               placeholder="State or Region"
               />
             </label>
@@ -369,8 +370,8 @@ displayBlogPost = (posts) => {
                         <div>
                             <input 
                                 type="submit" 
-                                value="Submit" 
-                                className="btn btn-primary"
+                                value="Submit to HEALING CIRCLE" 
+                                className="btn orange btn-primary"
                                 />
                         </div>
                     </form>
@@ -382,6 +383,7 @@ displayBlogPost = (posts) => {
         
       
       <div className="blog-">
+      <h3>HEALING CIRCLE</h3>
         {this.displayBlogPost(this.state.posts)}
       </div>
       <div className="footer">

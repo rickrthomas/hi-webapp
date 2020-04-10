@@ -6,7 +6,7 @@ return (
 <div>
     <div className="container flow-text">
     <br />
-        <h1>About the Healer's Intent Web App</h1>
+        <h4>About Healer's Intent</h4>
         
         <ul>
         <br />
