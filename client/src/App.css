@@ -35,7 +35,6 @@
 .instructionsIcon{
   position: relative;
   width: 60%;
-
 }
 
 
@@ -53,7 +52,17 @@
   transform: translate(-50%, -50%);
   color: white; 
 }
+
 .askSendContainer{
   position: relative;
   text-align: center;
+}
+
+.disclaimer{
+  font-size: 50%;
+}
+.disclaimerheader{
+  font-size: 75%;
+  text-align: center;
+  
 }

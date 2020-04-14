@@ -11,8 +11,8 @@ const NavBar = () => {
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
       <Link to="/" className="brand-logo center" ><img src={Intention_Logo} alt="Intention Logo" className="nav-logo"></img></Link>
-        <li class="tab"><Link to="/instructions" className="item">HEALING CIRCLE</Link></li>
-        <li class="tab"><Link to="/disclaimer" className="item">HEALING REQUEST</Link></li>
+        <li class="tab"><Link to="/instructions" className="item">SEND</Link></li>
+        <li class="tab"><Link to="/" className="item">REQUEST</Link></li>
         
       </ul>
     </div>

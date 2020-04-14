@@ -6,6 +6,7 @@
     "cra-template": "1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-materialize": "^3.8.3",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -30,8 +31,15 @@
     ]
   },
   "proxy": "http://localhost:8080",
-  
-  "keywords": ["healer", "intent", "distance healing", "prayer healing", "intention", "healing", "trublu art and design"],
+  "keywords": [
+    "healer",
+    "intent",
+    "distance healing",
+    "prayer healing",
+    "intention",
+    "healing",
+    "trublu art and design"
+  ],
   "author": "Rick Thomas : TruBlu Art & Design : trubluarts@gmail.com",
   "description": "Healer's Intent is a community of healers. We strive to join people together for the purpose of healing each other.",
   "license": "ISC"
