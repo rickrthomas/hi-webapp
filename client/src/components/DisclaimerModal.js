@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 //import M from "materialize-css";
 //import "materialize-css/dist/css/materialize.min.css";
-import { Link } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'; 
+import Resources from './Resources.js';
+import Request from './Request.js';
 
 class DisclaimerModal extends Component {
   
@@ -34,6 +36,9 @@ class DisclaimerModal extends Component {
  render() {
  
     return (
+
+      <Router>
+      
       <div className="container">
         
       {/*<h5>Request Healing through the button below</h5>
@@ -105,14 +110,15 @@ If you have any questions about this Privacy Policy, please contact us.
             
             </li>
             <p></p>
-            <li><Link to="/" className="btn orange waves-effect waves-light">
+            <li><Link to="/disclaimer" className="btn orange waves-effect waves-light">
               Disagree
             </Link>
             </li>
            </ul> 
           </div>
-          
-        
+          <Route path="/resources" component={Resources} />   
+      <Route path="/request" component={Request} />
+        </Router>
     );
   }
 }

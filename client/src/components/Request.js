@@ -251,6 +251,7 @@ handleChange = ({ target }) => {
                                     className="form-control"
                                     value={this.state.description}
                                     onChange={this.handleChange}
+                                    name="description"
                                     placeholder="Please give us a description of how you know this person."
                                     />
                         </div>
