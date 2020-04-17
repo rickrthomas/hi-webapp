@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
-import { Link } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom'; 
+
+
 class DisclaimerModal extends Component {
+  
   componentDidMount() {
     const options = {
       onOpenStart: () => {
@@ -15,9 +16,10 @@ class DisclaimerModal extends Component {
       onCloseStart: () => {
         console.log("Close Start");
       },
+      
       onCloseEnd: () => {
         console.log("Close End");
-        window.location.assign('/request');
+       // window.location.assign('/');
       },
       inDuration: 250,
       outDuration: 250,
@@ -28,10 +30,11 @@ class DisclaimerModal extends Component {
     };
     M.Modal.init(this.Modal, options);
   }
-
+  
   render() {
+  
     return (
-      <BrowserRouter>
+      <div>
         
       <h5>Request Healing through the button below</h5>
         <a
@@ -89,19 +92,19 @@ If you have any questions about this Privacy Policy, please contact us.
               </ul>
           </div>
           <div class="modal-footer">
-            <Link to="/" className="item">
-            <button  className="modal-close waves-effect waves-red btn-flat">
+            
+            <a href="/" className="modal-close waves-effect waves-red btn-flat">
               Disagree
-            </button>
-            </Link>
-            <Link to="/request" className="item">
-            <button  className="modal-close waves-effect waves-green btn-flat">
-              AGREE
-            </button>
-            </Link>
+            
+            </a>
+            <a href="/request" className="modal-close waves-effect waves-green btn-flat">
+            
+            AGREE
+          
+            </a>
           </div>
         </div>
-      </BrowserRouter>
+      </div>
     );
   }
 }

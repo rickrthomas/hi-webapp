@@ -14,10 +14,7 @@ import Instructions from './components/Instructions.js';
 import DisclaimerModal from './components/DisclaimerModal.js';
 import Request from './components/Request.js';
 import Send from './components/Send.js';
-
-
-
-// import AskSend from './components/AskSend.js';
+import AskSend from './components/AskSend.js';
 
 class App extends Component{
   
@@ -204,10 +201,11 @@ class App extends Component{
         <header className="App-header">
       <NavBar />
       <p></p>
-    {/* <DisclaimerModal />*/}
+  
 
       </header>
       
+<Route exact path="/" component={AskSend} />   
         <Route path="/about" component={About} />
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
@@ -216,7 +214,7 @@ class App extends Component{
 <Route path="/request" component={Request} />
 <Route path="/send" component={Send} />
 <Route path="/disclaimer" component={DisclaimerModal} />
-  {/* <AskSend />  */}
+ 
   
   {/*     <div className="card">
         <div className="card-content">
@@ -417,7 +415,7 @@ class App extends Component{
         {this.displayBlogPost(this.state.posts)}
       </div>
       */}
-      
+
       <div className="footer">
           <Footer />
         </div>
