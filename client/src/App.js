@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
 import NavBar from './components/NavBar';
-import { BrowserRouter, Route } from 'react-router-dom'; 
+import { BrowserRouter,Switch, Route } from 'react-router-dom'; 
 import Footer from './components/Footer.js';
 import './App.css';
 // import TextareaAutosize from 'react-autosize-textarea';
@@ -195,6 +195,7 @@ class App extends Component{
     
     return (
        <BrowserRouter>
+       <Switch>
       <div className="App">
       
        
@@ -215,213 +216,12 @@ class App extends Component{
 <Route path="/send" component={Send} />
 <Route path="/disclaimer" component={DisclaimerModal} />
  
-  
-  {/*     <div className="card">
-        <div className="card-content">
-                <h4>About the Person in Need of Healing</h4>
-                    <form onSubmit={this.submit}>
-                        <div className="row">          
-                            </div>
-                            <div className="row">
-                            <div className="col s6 m6">
-                            <div className="form-group">
-                                <label>
-                                First Name
-                                    <input
-                                        type="text" 
-                                        className="validate" 
-                                        value={this.state.first} 
-                                        onChange={this.handleChange}
-                                        name="first"
-                                        placeholder="First Name"
-                                    />
-                                </label>
-                                
-                            </div>
-                            </div>
-                            <div className="col s6 m6">
-                            <div className="form-group">
-                                <label>
-                                Last Name
-                                    <input 
-                                        type="text" 
-                                        className="validate" 
-                                        value={this.state.last} 
-                                        onChange={this.handleChange} 
-                                        name="last" 
-                                        placeholder="Last Name"
-                                    />
-                                </label>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col s12 m6">
-                            <div className="form-group">
-                                <label>
-                                Age
-                                    <input 
-                                        type="text" 
-                                        className="validate" 
-                                        value={this.state.age} 
-                                        onChange={this.handleChange} 
-                                        name="age" 
-                                        placeholder="Age"
-                                    />
-                                </label>
-                            </div>  
-                            </div>
-                            <div className="col s12 m6">
-                            <div className="form-group">  
-                                <label>
-                                Gender
-                                    <input 
-                                        type="text" 
-                                        className="validate" 
-                                        value={this.state.gender} 
-                                        onChange={this.handleChange}
-                                        name="gender"
-                                        placeholder="Gender"
-                                    />
-                                </label>
-                            </div>
-                            </div>
-                        </div>
-                        <h4>Where They Live</h4>
-                        <div className="row">
-                            <div className="col s12 m4">
-                            <div className="form-group">
-                                <label>
-                                City
-                                <input 
-                                    type="text" 
-                                    value={this.state.city} 
-                                    onChange={this.handleChange} 
-                                    name="city" 
-                                    placeholder="City"
-                                />
-                                </label>
-                            </div>
-                            </div>
-        <div className="col s12 m4">
-        <div className="form-group">
-            <label>
-              State or Region
-              <input 
-              type="text" 
-              value={this.state.region}
-              onChange={this.handleChange} 
-              name="region" 
-              placeholder="State or Region"
-              />
-            </label>
-        </div>
-        </div>
-        <div className="col s12 m4">
-        <div className="form-group">
-          <label>
-            Country
-            <input 
-            type="text" 
-            value={this.state.country} 
-            onChange={this.handleChange} 
-            name="country" 
-            placeholder="Country"
-            />
-          </label>
-      </div>
-      </div>
-      </div>
-  <h4>Conditions Requested To Heal</h4>
-  <div className="col s12 m12">
-      <div className="form-group">
-          <label>
-          
-          </label>
-  
-          <TextareaAutosize 
-          type="text" 
-          value={this.state.condition} 
-          onChange={this.handleChange} 
-          name="condition"
-          placeholder="Conditions to Heal" >
-          </TextareaAutosize>
-      </div>
-      </div>
-  <h4>Healing Requester Contact</h4>
-  <div className="row">
-  <div className="col s6 m6">
-      <div className="form-group">
-          <label>
-            Your Name
-            <input 
-            type="text" 
-            value={this.state.yourname} 
-            onChange={this.handleChange} 
-            name="yourname" 
-            placeholder="Your Name"
-            />
-          </label>
-      </div>
-      </div>
-      <div className="col s6 m6">
-      <div className="form-group">
-          <label>
-            Your Email
-            <input 
-            type="email" 
-            value={this.state.email} 
-            onChange={this.handleChange} 
-            name="email" 
-            placeholder="Your Email"
-            />
-          </label>
-      </div>          
-      </div>
-      
-      </div>
-      <div className="form-group col s12 m12">
-                          <label>Description Of How You Know This Person: </label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  value={this.state.description}
-                                  onChange={this.handleChange}
-                                  placeholder="Please give us a description of how you know this person."
-                                  />
-                      </div>
-                      <div>
-                        <p></p>
-                          <input 
-                              type="submit" 
-                              value="Submit to HEALING CIRCLE" 
-                              className="btn orange btn-primary"
-                              />
-                      </div>
-                  </form>
-                  <div>
-                      <p></p>
-                  </div>
-          </div>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-        
-     </div>
-  
-      <div className="blog-">
-      <h3>HEALING CIRCLE</h3>
-        {this.displayBlogPost(this.state.posts)}
-      </div>
-      */}
-
       <div className="footer">
           <Footer />
         </div>
       
       </div>
-    
+      </Switch>
       </BrowserRouter>
     );
   }
