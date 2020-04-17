@@ -194,7 +194,7 @@ class App extends Component{
    
     
     return (
-       <Router forceRefresh={true}>
+       <Router >
        
       <div className="App">
       
