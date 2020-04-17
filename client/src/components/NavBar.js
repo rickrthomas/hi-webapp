@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
     return (
         <div>
-  <nav class="nav-extended">
+  <nav className="nav-extended">
 
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
+    <div className="nav-content">
+      <ul className="tabs tabs-transparent">
       <Link to="/" className="brand-logo center" ><img src={Intention_Logo} alt="Intention Logo" className="nav-logo"></img></Link>
-        <li class="tab"><Link to="/instructions" className="item">SEND</Link></li>
-        <li class="tab"><Link to="/" className="item">REQUEST</Link></li>
+        <li className="tab"><Link to="/instructions" className="item">SEND</Link></li>
+        <li className="tab"><Link to="/disclaimer" className="item">REQUEST</Link></li>
         
       </ul>
     </div>

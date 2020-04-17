@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 function Footer() {
     return (
-        <div>
+        <div className="footerdiv">
           <footer className="page-footer">
               <div ></div>
                 <img src={IntentionLogo} alt="Healer's Intent Brand Logo" className="footer-logo"></img>
@@ -21,10 +21,10 @@ function Footer() {
              
           
    
-          <div class="footer-copyright">
-            <div class="container">
+          <div className="footer-copyright">
+            <div className="container">
             © 2020 TruBlu Art & Design
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <a className="grey-text text-lighten-4 right" href="#!">Venmo Donations Accepted @RickRThomas</a>
             </div>
           </div>
         </footer>   

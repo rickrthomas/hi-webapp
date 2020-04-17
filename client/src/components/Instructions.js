@@ -35,7 +35,7 @@ return (
             <img src ={Distant_Healing_5} className="instructionsIcon" alt="Distant Healing Instructions"></img>
             <li>Now that you've practiced and are familiar with how to heal from a distance. Choose a person from the Healing Circle to heal!</li>
             <p></p>
-    <Link className="btn waves-effect waves-light" to="/" >Start Healing</Link>
+    <Link className="btn waves-effect waves-light" to="/send" >Start Healing</Link>
         </ul>
     </div>
     

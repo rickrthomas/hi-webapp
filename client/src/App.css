@@ -59,10 +59,14 @@
 }
 
 .disclaimer{
-  font-size: 50%;
+  font-size: 70%;
+  text-align: left;
 }
 .disclaimerheader{
-  font-size: 75%;
+  font-size: 80%;
   text-align: center;
-  
+  text-transform: uppercase;
+}
+.footerdiv{
+  background-color:  hsl(187, 98%, 35%);
 }
