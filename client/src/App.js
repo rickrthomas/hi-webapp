@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
 import NavBar from './components/NavBar';
-import { BrowserRouter,Switch, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 import Footer from './components/Footer.js';
 import './App.css';
 // import TextareaAutosize from 'react-autosize-textarea';
@@ -194,19 +194,16 @@ class App extends Component{
    
     
     return (
-       <BrowserRouter>
-       <Switch>
+       <Router forceRefresh={true}>
+       
       <div className="App">
       
-       
         <header className="App-header">
       <NavBar />
       <p></p>
-  
-
       </header>
-      
-<Route exact path="/" component={AskSend} />   
+    <Switch>  
+    <Route exact path="/" component={AskSend} />   
         <Route path="/about" component={About} />
         <Route path="/resources" component={Resources} />
         <Route path="/contact" component={Contact} />
@@ -215,14 +212,14 @@ class App extends Component{
 <Route path="/request" component={Request} />
 <Route path="/send" component={Send} />
 <Route path="/disclaimer" component={DisclaimerModal} />
- 
+ </Switch>
       <div className="footer">
           <Footer />
         </div>
       
       </div>
-      </Switch>
-      </BrowserRouter>
+      
+      </Router>
     );
   }
 }
