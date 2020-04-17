@@ -75,7 +75,7 @@ handleChange = ({ target }) => {
       email: '',
       yourname: ''
     });
-    window.location.assign('/send');
+    
   };
   
     render() {
