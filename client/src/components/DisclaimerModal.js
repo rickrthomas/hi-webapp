@@ -90,12 +90,12 @@ If you have any questions about this Privacy Policy, please contact us.
           </div>
           <div class="modal-footer">
             <Link to="/" className="item">
-            <a href="http://www.healersintent/" className="modal-close waves-effect waves-red btn-flat">
+            <a  className="modal-close waves-effect waves-red btn-flat">
               Disagree
             </a>
             </Link>
             <Link to="/request" className="item">
-            <a href="http://www.healersintent/request" className="modal-close waves-effect waves-green btn-flat">
+            <a  className="modal-close waves-effect waves-green btn-flat">
               AGREE
             </a>
             </Link>
