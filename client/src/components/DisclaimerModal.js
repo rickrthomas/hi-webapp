@@ -90,14 +90,14 @@ If you have any questions about this Privacy Policy, please contact us.
           </div>
           <div class="modal-footer">
             <Link to="/" className="item">
-            <a  className="modal-close waves-effect waves-red btn-flat">
+            <button  className="modal-close waves-effect waves-red btn-flat">
               Disagree
-            </a>
+            </button>
             </Link>
             <Link to="/request" className="item">
-            <a  className="modal-close waves-effect waves-green btn-flat">
+            <button  className="modal-close waves-effect waves-green btn-flat">
               AGREE
-            </a>
+            </button>
             </Link>
           </div>
         </div>
