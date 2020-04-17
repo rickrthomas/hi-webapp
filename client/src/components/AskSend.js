@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ask from '../img/ask.png';
-import send from '../img/send.png';
-import { BrowserRouter, Link } from 'react-router-dom';
-import DisclaimerModal from './DisclaimerModal.js';
+//import ask from '../img/ask.png';
+//import send from '../img/send.png';
+//import { BrowserRouter, Link } from 'react-router-dom';
+//import DisclaimerModal from './DisclaimerModal.js';
 
 class AskSend extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import M from "materialize-css";
-import "materialize-css/dist/css/materialize.min.css";
-import { Link } from 'react-router-dom'; 
+//import M from "materialize-css";
+//import "materialize-css/dist/css/materialize.min.css";
+// import { Link } from 'react-router-dom'; 
 
 class DisclaimerModal extends Component {
   

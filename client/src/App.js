@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import axios from 'axios';
 import NavBar from './components/NavBar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route } from 'react-router-dom'; 
 import Footer from './components/Footer.js';
 import './App.css';
 // import TextareaAutosize from 'react-autosize-textarea';
