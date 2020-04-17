@@ -7,7 +7,12 @@ import React, { Component } from 'react';
 class AskSend extends Component {
   render() {
     return (
+      <div className="container">
       <h4 >Welcome to Healer's Intent!</h4>
+      <p >
+        Healer's Intent is a community of healers. We strive to join people together for the purpose of healing each other through distance healing.
+      </p>
+      </div>
       
 //      <BrowserRouter>
 //    
