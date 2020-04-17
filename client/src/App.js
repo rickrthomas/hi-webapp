@@ -202,7 +202,7 @@ class App extends Component{
       <NavBar />
       <p></p>
       </header>
-    <Switch>  
+     
     <Route exact path="/" component={AskSend} />   
         <Route path="/about" component={About} />
         <Route path="/resources" component={Resources} />
@@ -212,7 +212,7 @@ class App extends Component{
 <Route path="/request" component={Request} />
 <Route path="/send" component={Send} />
 <Route path="/disclaimer" component={DisclaimerModal} />
- </Switch>
+
       <div className="footer">
           <Footer />
         </div>
