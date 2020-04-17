@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //import M from "materialize-css";
 //import "materialize-css/dist/css/materialize.min.css";
-// import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 
 class DisclaimerModal extends Component {
   
@@ -91,24 +91,23 @@ We reserve the right to update or change our Privacy Policy at any time and you 
 If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.
 If you have any questions about this Privacy Policy, please contact us.
                   </li>
-              </ul>
+              
           {/* </div>
                <div class="modal-footer">
                  */}
             <h5>By clicking below you're agreeing to the previous Disclaimers & Conditions</h5>
-            <ul>
-            <li><a href="/request" className="btn orange waves-effect waves-light">
+            
+            <li><Link to="/request" className="btn orange waves-effect waves-light">
             
             Agree to Conditions & Request Healing
           
-            </a>
+            </Link>
             
             </li>
             <p></p>
-            <li><a href="/" className="btn orange waves-effect waves-light">
+            <li><Link to="/" className="btn orange waves-effect waves-light">
               Disagree
-            
-            </a>
+            </Link>
             </li>
            </ul> 
           </div>
