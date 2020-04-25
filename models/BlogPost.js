@@ -7,7 +7,7 @@ const BlogPostSchema = new Schema ({
     expireAt: {
         type: Date,
         default: Date.now,
-        index: { expires: '10080m' },
+        index: { expires: '7d' },
       },
       
     first: String,
