@@ -28,13 +28,14 @@ app.use(express.urlencoded({ extended: false}));
 app.use(morgan('tiny'));
 app.use('/api', routes);
 
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/public/index.html'), function(err) {
-      if (err) {
-        res.status(500).send(err)
-      }
-    })
-  })
+//https://tylermcginnis.com/react-router-cannot-get-url-refresh/
+//app.get('/*', function(req, res) {
+//    res.sendFile(path.join(__dirname, 'client/public/index.html'), function(err) {
+//      if (err) {
+//        res.status(500).send(err)
+//      }
+//    })
+//  })
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
