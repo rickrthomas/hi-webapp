@@ -15,6 +15,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/hi', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
 //listener for database connection
 mongoose.connection.on('connected', () => {
     console.log('Mongoose is connected!!!');
@@ -26,6 +27,14 @@ app.use(express.urlencoded({ extended: false}));
 //HTTP request logger
 app.use(morgan('tiny'));
 app.use('/api', routes);
+
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/public/index.html'), function(err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    })
+  })
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
